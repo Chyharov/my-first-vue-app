@@ -28,6 +28,8 @@ git branch "branchName" - створює гілку з назвою "branchName"
 git checkout "branchName" - переходить на гілку з назвою "branchName"
 git checkout -b "branchName" - сторюємо гілку з назвою "branchName" і переходим в неї
 git push --set-upstream origin "branchName" - створює гілку і пушить код у поточну гілку
+або
+git push -u origin "branchName"
 
 git add . - зберігає зміни в файлах
 git commit -m "commit message" - підписуємо збереженні зміни в файлах
