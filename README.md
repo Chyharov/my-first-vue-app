@@ -33,6 +33,7 @@ git push -u origin "branchName"
 
 git add . - зберігає зміни в файлах
 git commit -m "commit message" - підписуємо збереженні зміни в файлах
+git commit -am "commit message" - одразу дві команди "git add ." + "git commit -m "commit message""
 git push - відправляємо зміни на сайт GitHub
 
 git pull - отримуємо останні зміни з сайту GitHub
