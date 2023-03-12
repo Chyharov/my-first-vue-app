@@ -41,6 +41,8 @@ git push -u origin "branchName"
 git pull - отримуємо останні зміни з сайту GitHub
 git marge "branchName" - зливаеємо гілку з назвою "branchName" в поточну гілку
 git merge --abort - відміняємо зливання гілок
+git branch -d "branchName" - видаляє гілку локально з проекту
+git push origin --delete "branchName" - видаляє гілку на сайті GitHub
 
 git status - показує статус проекту
 
