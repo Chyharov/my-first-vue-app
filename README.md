@@ -33,7 +33,6 @@ git branch - показує список гілок в проєкті
 git branch -r - показує список гілок на сайті GitHub
 git branch -a - показує список гілок на компютері та на сайті GitHub
 git branch "branchName" - створює гілку з назвою "branchName"
-
 git checkout "branchName" - переходить на гілку з назвою "branchName"
 git checkout -b "branchName" - сторюємо гілку з назвою "branchName" і переходим в неї
 git push --set-upstream origin "branchName" - створює гілку і пушить код у поточну гілку
