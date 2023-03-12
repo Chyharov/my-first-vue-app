@@ -27,6 +27,7 @@ git clone - копіює репозиторій(папку щ файлами) н
 git branch "branchName" - створює гілку з назвою "branchName"
 git checkout "branchName" - переходить на гілку з назвою "branchName"
 git checkout -b "branchName" - сторюємо гілку з назвою "branchName" і переходим в неї
+git push --set-upstream origin "branchName" - відправляє pull request на сайт GitHub
 
 git add . - зберігає зміни в файлах
 git commit -m "commit message" - підписуємо збереженні зміни в файлах
