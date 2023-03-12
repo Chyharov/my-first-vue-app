@@ -54,3 +54,4 @@ git deff - показує відрізки рядків між двома вер
 git log - показує історію комітів - щоб вийти Q
 
 git pull - отримуємо останні зміни з сайту GitHub
+git checkout "numberCommit" - переходить на коміт з назвою "numberCommit"
