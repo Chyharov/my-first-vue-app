@@ -2,7 +2,7 @@
   "name": "my-first-vue-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Chyharov/my-first-vue-app.git",
+  "homepage": "https://chyharov.github.io/my-first-vue-app/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
