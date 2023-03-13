@@ -1,30 +1,64 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <div class="app">
+        <post-form
+        @create="createPost"
+        />
+        <post-list 
+        :posts="posts"
+        @remove="removePost"
+        />
+    </div>
+
 </template>
 
+<script>
+import PostForm from "@/components/PostForm.vue"
+import PostList from "@/components/PostList.vue"
+
+export default {
+    components: {
+        PostList, PostForm
+    },
+    data() {
+        return {
+            posts: [
+                { id: 1, title: 'JavaScript', body: 'Опис посту' },
+                { id: 2, title: 'JavaScript 2', body: 'Опис посту 2' },
+                { id: 3, title: 'JavaScript 3', body: 'Опис посту 3' },
+                { id: 4, title: 'JavaScript 4', body: 'Опис посту 4' },
+            ],
+        }
+    },
+    methods: {
+        createPost(post) {
+            this.posts.push(post);
+        },
+        removePost(post) {
+            this.posts = this.posts.filter(p => p.id !== post.id)
+        }
+    }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-  padding: 30px;
+.app {
+    padding: 20px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
+
+<!-- <div>
+        <div>
+            <button @click="addLike">Like</button>
+            <button @click="addDislike">Dislike</button>
+        </div>
+<div>Кількість лайків: <strong>{{ likes }}</strong></div>
+<div>Кількість дизлайків: <strong>{{ dislikes }}</strong></div>
+    </div> -->
