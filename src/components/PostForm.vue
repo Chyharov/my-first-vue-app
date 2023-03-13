@@ -5,28 +5,36 @@
         <h3>Сворення посту</h3>
 
             <input 
-            v-model="post.title"
-            class="input" 
-            type="text"
-            placeholder="Назва"
+                v-model="post.title"
+                class="input" 
+                type="text"
+                placeholder="Назва"
             >
 
             <input 
-            v-model="post.body"
-            class="input" 
-            type="text" 
-            placeholder="Опис"
+                v-model="post.body"
+                class="input" 
+                type="text" 
+                placeholder="Опис"
             >
             
-            <button class="btn" @click="createPost">Створити</button>
+            <my-button 
+                @click="createPost"
+                >
+                Створити
+            </my-button>
 
     </form>
 
 </template>
 
 <script>
+import MyButton from './UI/MyButton.vue';
 
-    export default {
+export default {
+    components: {
+            MyButton
+        },
     data() {
         return {
             post: {
@@ -64,12 +72,7 @@ form {
 }
 
 .btn {
-    margin-top: 15px;
     align-self: flex-end;
-    padding: 10px 15px;
-    background: none;
-    color: teal;
-    border: 1px solid teal;
 }
 
 </style>
