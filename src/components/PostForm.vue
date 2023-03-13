@@ -4,21 +4,20 @@
 
         <h3>Сворення посту</h3>
 
-            <input 
+            <my-input 
                 v-model="post.title"
-                class="input" 
                 type="text"
                 placeholder="Назва"
-            >
+            />
 
-            <input 
+            <my-input
                 v-model="post.body"
-                class="input" 
                 type="text" 
                 placeholder="Опис"
-            >
+            />
             
             <my-button 
+                style="align-self: flex-end; margin-top: 15px;"
                 @click="createPost"
                 >
                 Створити
@@ -29,12 +28,9 @@
 </template>
 
 <script>
-import MyButton from './UI/MyButton.vue';
+
 
 export default {
-    components: {
-            MyButton
-        },
     data() {
         return {
             post: {
@@ -62,17 +58,6 @@ export default {
 form {
     display: flex;
     flex-direction: column;
-}
-
-.input {
-    width: 100%;
-    border: 1px solid teal;
-    padding: 10px 15px;
-    margin: 15px 0;
-}
-
-.btn {
-    align-self: flex-end;
 }
 
 </style>
