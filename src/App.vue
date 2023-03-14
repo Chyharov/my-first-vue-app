@@ -1,64 +1,44 @@
 <template>
-    <div class="app">
-        <post-form
-        @create="createPost"
-        />
-        <post-list 
-        :posts="posts"
-        @remove="removePost"
-        />
-    </div>
-
+  <div>
+    <h1>Тут буде додаток</h1>
+  </div>
 </template>
 
 <script>
-import PostForm from "@/components/PostForm.vue"
-import PostList from "@/components/PostList.vue"
-
-export default {
-    components: {
-        PostList, PostForm
-    },
-    data() {
-        return {
-            posts: [
-                { id: 1, title: 'JavaScript', body: 'Опис посту' },
-                { id: 2, title: 'JavaScript 2', body: 'Опис посту 2' },
-                { id: 3, title: 'JavaScript 3', body: 'Опис посту 3' },
-                { id: 4, title: 'JavaScript 4', body: 'Опис посту 4' },
-            ],
-        }
-    },
-    methods: {
-        createPost(post) {
-            this.posts.push(post);
-        },
-        removePost(post) {
-            this.posts = this.posts.filter(p => p.id !== post.id)
-        }
-    }
-}
+  export default {
+    
+  }
 </script>
 
-<style>
+<style scoped>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-.app {
-    padding: 20px;
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
 }
 
 </style>
-
-<!-- <div>
-        <div>
-            <button @click="addLike">Like</button>
-            <button @click="addDislike">Dislike</button>
-        </div>
-<div>Кількість лайків: <strong>{{ likes }}</strong></div>
-<div>Кількість дизлайків: <strong>{{ dislikes }}</strong></div>
-    </div> -->
